@@ -1,0 +1,237 @@
+body {
+    background-color: #CD5241;
+    font-size: 16px;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    top: 0px;
+    background-color: #EE8329;
+    height: 80px;
+    width: 100%;
+    margin: 0 -6px;
+    padding: 0 auto;
+    justify-content: space-between;
+    align-content: center;
+    z-index: 2;
+    border-bottom: 4px solid #FFD510;
+}
+
+header ul,
+header li {
+    background-color: #EE8329;
+    list-style: none;
+    display: inline-flex;
+    padding: 5px;
+    line-height: 1;
+    font-size: 1.5rem;
+    color: #084152;
+    font-weight: bold;
+}
+
+header li {
+    border: 2px solid #EEDE78;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+header img {
+    margin: 10px 10px;
+    height: 60px;
+    width: 60px;
+    float: left;
+}
+
+#main_banner {
+    position: relative;
+    top: 80px;
+    background-image: url("./main_banner.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #EEDE78;
+    border-radius: 5px;
+}
+
+#main_banner_text h1,
+#main_banner_text h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #EE8329;
+    text-shadow: 2px 2px 2px white;
+    width: 100%;
+    color: #084152;
+    height: auto;
+    line-height: 2;
+    font-weight: bold;
+}
+
+#introduction {
+    position: relative;
+    top: 85px;
+    background-color: #EE8329;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    color: #084152;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 5px solid #EEDE78;
+    border-radius: 5px;
+}
+
+#introduction a {
+    color: #207394;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#friend_code {
+    position: relative;
+    top: 90px;
+    background-color: #EE8329;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #084152;
+    border: 5px solid #EEDE78;
+    border-radius: 5px;
+    background-image: url(./fire.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* Center the background image */
+    background-size: contain;
+    background-blend-mode:darken;
+    /* Adjust the size of the background image */
+    position: relative;
+    /* Make sure the ::before pseudo-element is positioned relative to this element */
+}
+
+#friend_code::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Semi-transparent background color */
+    z-index: -1;
+    /* Move the pseudo-element behind the content */
+    border-radius: 5px;
+    /* Adjust the border radius to match the main element */
+}
+
+#friend_code img {
+    height: 400px;
+}
+
+#raid {
+    position: relative;
+    top: 90px;
+    background-color: #EE8329;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #084152;
+    border: 5px solid #EEDE78;
+    border-radius: 5px;
+}
+
+#raid img {
+    width: 80%;
+    border: 5px solid #084152;
+    border-radius: 5px;
+}
+
+#rules {
+    position: relative;
+    top: 90px;
+    background-color: #EE8329;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    font-size: 1.1rem;
+    color: #084152;
+    border: 5px solid #EEDE78;
+    border-radius: 5px;
+}
+
+#rules h2,
+#rules p {
+    text-align: center;
+}
+
+/* Media Queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+
+    /* Styles for regular screens and tablets */
+    header {
+        height: 60px;
+    }
+
+    header img {
+        height: 40px;
+        width: 40px;
+    }
+
+    header ul,
+    header li {
+        font-size: 1rem;
+    }
+
+    #main_banner_text h1,
+    #main_banner_text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* Styles for small phones */
+    header {
+        height: 50px;
+    }
+
+    header img {
+        height: 30px;
+        width: 30px;
+    }
+
+    header ul,
+    header li {
+        font-size: 0.8rem;
+    }
+
+    #main_banner_text h1,
+    #main_banner_text h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Locking the size when screen is smaller than 480px */
+    body {
+        min-width: 320px;
+        /* or any other suitable value */
+    }
+
+    
+}
+
+@media only screen and (max-width:400px){
+    /* Adjusting main banner text for smaller screens */
+        #main_banner_text h1,
+        #main_banner_text h2 {
+            font-size: 1rem;
+        }
+}
